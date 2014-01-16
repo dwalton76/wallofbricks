@@ -1,0 +1,148 @@
+
+HIGH Priority
+====================================
+Importing
+- sets_i_own needs a source column (rebrickable, brickowl, etc)
+- add wishlist import from brickset
+- add inventory import from brickset
+- add inventory import from brickowl order history
+- keep import history so someone can always "undo" it
+- store rebrickable, brickset, etc hash
+- implement peer-rebrickable.php in myaccounts.php
+
+Inventory
+- qty ui for sets
+- qty ui for bricks
+DONE - bricks.php show how many you own
+- bricks.php "Add To My Bricks"
+- bricks.php "Add To Wishlist"
+DONE - mybricks fix order
+DONE - mybricks add fade knobs for 'extras' vs 'set bricks' vs 'all'
+
+Accounts
+- tag local stores 
+- wishlist notifications for parts in local stores 
+- require login to update a wall
+- currency setting
+
+API
+DONE - put APIs in an /api directory
+- require key to use
+
+Set Inventories
+- redownload from brickset
+- EV3 needs to be updated
+- Work on sanity checking vs rebrickable's set inventories without introducing duplicate parts.
+  Use the bricklink_id column in the bricks table for this.
+
+getMyBricks
+DONE - There should be a way to do all of this in SQL which would be much faster.
+       This would probably be a UNION query.
+
+Shopping List
+- get parts pricing data from brickowl
+- need a www_stores table
+	- LEGO online PAB
+	- LEGO Bricks and Pieces
+	- brickowl stores
+	- bricklink stores
+
+Misc
+- move set_sync.pl to /tools
+- cleanup and organize /tools
+   
+
+MEDIUM Priority
+====================================
+
+Sets Page
+- ui to add a missing part
+- link to site that shows current value of the set
+- download and display the manuals
+	- give link to pdf
+	- break pdf down into images and use jquery to flip through page by page
+	- *provide interface so user can tag which parts are on which page
+	- *highlight was is different from one page to the next
+	- *replace blue background with transparent pixels
+
+Minifigs
+- figure out which minifigs are in which sets
+- bring back the minifigs display
+
+Sprites
+- set parts display
+- LEGO online PAB parts display
+- multi-color brick display at the top of bricks.php
+
+Alternate Parts
+- *provide a mapping of old part #s to their new/better counterparts
+  You should be able to get this from the database by finding parts with the same color and same design_id
+- *when figuring out what parts are needed take these into consideration
+
+* stretch goals
+
+
+LOW Priority
+====================================
+DONE - Use git for source code control
+- delete css that is no longer used
+- Fix text/height issue for color squares
+- Amazon/Ebay links
+
+
+DONE :)
+====================================
+
+Wall Display
+DONE - Map below the wall content
+DONE - use the Parts Search interface to let the user display certain types of parts (all the red parts for example)
+DONE - present a calendar so the user can select a date then highlight the parts that were added after that date
+
+Parts Page
+DONE - have a second section (after 'Available At These Stores') that shows when the part has been available at the various stores
+DONE - use a google images-ish UI to keep loading the next group of sets that use this part
+DONE - display other colors of the same brick
+DONE - print color squares based on the info in lego_colors table
+
+Sets Page
+DONE - Use TDs to display the list of parts
+DONE - Provide filter options (only show the red bricks from a set for example)
+
+DONE - drop row_cols_set column from lego_store
+DONE - start collecting stats on what pages people are viewing
+DONE - split js into multiple file specific to each page
+DONE - only load jqueryui when neeeded
+DONE - only load jquery cookie library when neeeded
+DONE - Multiple Bricks Per Bin
+DONE - fix set.php for co-pack sets like 65030-1
+DONE - fix set cty360-0...this should be flagged a minifig so it doesn't show up in the sets results
+DONE - fix set 70102-1 it needs to show the Gear (playing cards) as well
+DONE - fix this http://192.168.1.20:8005/minifig-brick.php?id=4530-2
+DONE - backup the sets_inventory table and change the brick_type to ENUM 
+DONE - backup the sets table and change the img_type to ENUM 
+DONE 	- remove price_per_piece
+DONE - recalculate brick_types
+DONE - recalculate minifigs
+DONE - recalculate interesting
+
+DONE - check user activity data on if I should fade out 'part type' and
+       dimension when people search based on keyword
+DONE - fix duplicates filter
+
+FAIL - create a boolean that tells whether or not all of the parts in a set are
+       available across all PaB walls. If they are then check just that subset
+       of sets in pab-display...use that crazy long sql query from stackoverflow.
+     - What if you ignore colors...what sets can you build then?
+     - I got this working but it just isn't worth it.  There is never a
+       decent set that you can build from all of the parts available across
+       ALL PaB walls much less one wall.
+
+DONE - once sets_dr.pl has finished running, run parts_dr.pl
+DONE - once parts_dr.pl has finished running purge everything from the bricks table that isn't used in a set
+DONE - use colors database for printing color stuff
+DONE - run parts_dr once all of the sets and minifigs have been parsed
+DONE - run alt1 alt2 stuff again
+DONE - make a GUI to make searching for a set as easy as the GUI for searching for a part
+DONE - Use Lego part numbers instead of bricklink part numbers
+DONE - Use Lego images instead of bricklink images
+

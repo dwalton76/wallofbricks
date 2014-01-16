@@ -1,0 +1,213 @@
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+DROP TABLE IF EXISTS `bricks`;
+CREATE TABLE IF NOT EXISTS `bricks` (
+  `id` int(20) unsigned NOT NULL,
+  `design_id` int(20) unsigned DEFAULT NULL,
+  `part_type` enum('brick','plate','slope','technic','tile','minifig','gear') DEFAULT NULL,
+  `color` enum('Aqua','Black','Brick Yellow','Bright Blue','Bright Bluish Green','Bright Bluish Violet','Bright Green','Bright Orange','Bright Purple','Bright Red','Bright Reddish Lilac','Bright Reddish Orange','Bright Reddish Violet','Bright Violet','Bright Yellow','Bright Yellowish Green','Bright Yellowish Orange','Brown','Cool Silver','Cool Silver, Diffuse','Cool Silver, Drum Lacq','Cool Yellow','Copper','Copper, Diffuse','Copper, Drum Lacq','Curry','Dark Azur','Dark Brown','Dark Green','Dark Grey','Dark Nougat','Dark Orange','Dark Royal Blue','Dark Stone Grey','Dove Blue','Earth Blue','Earth Green','Earth Orange','Flame Yellowish Orange','Flamingo Pink','Gold','Grey','In-Mould-Labeling','Lavender','Light Blue','Light Bluish Green','Light Bluish Violet','Light Green','Light Grey','Light Lilac','Light Nougat','Light Orange Brown','Light Purple','Light Reddish Violet','Light Royal Blue','Light Stone Grey','Light Yellow','Light Yellowish Green','Lilac','Medium Azur','Medium Blue','Medium Bluish Green','Medium Bluish Violet','Medium Green','Medium Lavender','Medium Lilac','Medium Nougat','Medium Reddish Violet','Medium Stone Grey','Medium Yellowish Green','Metallic Black','Metallic Bright Blue','Metallic Bright Red','Metallic Dark Green','Metallic Dark Grey','Metallic Earth-Orange','Metallic Sand Blue','Metallic Sand Yellow','Metallic White','Multicombination','New Dark Red','Not specified','Nougat','Olive Green','Pastel Blue','Phosph.Green','Phosphorescent White','Reddish Brown','Reddish Gold','Reddish Lilac','Royal Blue','Sand Blue','Sand Green','Sand Red','Sand Violet','Sand Yellow','Silver','Silver Metallic','Spring Yellowish Green','Titanium Metallic','Tr. Blue','Tr. Br. Bluish.Viol.W.Gliter2%','Tr. Bright Bluish Violet','Tr. Bright Green','Tr. Bright Orange','Tr. Bright Purple','Tr. Bright Reddish Lilac','Tr. Bright Yellowish Green','Tr. Brown','Tr. Fire Yellow','Tr. Flame Yellowish Orange','Tr. Fluore. Blue','Tr. Fluore. Green','Tr. Fluore.Redd. Orange','Tr. Green','Tr. Light Blue','Tr. Light Bluish Green','Tr. Light Green','Tr. Light Royal Blue','Tr. M. Reddish-Viol W. Glit.2%','Tr. Medium Reddish Violet','Tr. Red','Tr. Reddish Lilac','Tr. Yellow','Transparent','Transparent W. Glitter 2%','Warm Gold','Warm Gold, Drum Lacq','Warm Yellowish Orange','White','White Glow') DEFAULT NULL,
+  `dimensions` enum('1x1','1x1x1','1x1x2','1x1x3','1x1x5','1x1x6','1x10','1x10x2','1x12','1x12x3','1x14','1x16','1x2','1x2x1','1x2x2','1x2x3','1x2x4','1x2x5','1x3','1x3x1','1x3x2','1x3x3','1x3x4','1x3x5','1x4','1x4x1','1x4x2','1x4x3','1x4x4','1x4x5','1x4x6','1x5','1x5x3','1x5x4','1x6','1x6x10','1x6x2','1x6x3','1x6x5','1x6x6','1x8','1x8x2','1x8x6','1x9','10x10','10x10x4','10x12','10x3','12x10','12x12','12x16','12x24','16x14','16x16','16x24','16x32','16x8x2','2x1','2x1x2','2x1x3','2x10','2x10x2','2x12','2x12x4','2x12x6','2x14','2x16','2x18','2x2','2x2x1','2x2x10','2x2x11','2x2x2','2x2x20','2x2x3','2x2x4','2x2x5','2x2x6','2x2x7','2x22','2x24','2x28','2x3','2x3x1','2x3x2','2x3x3','2x4','2x4x1','2x4x2','2x4x3','2x4x4','2x4x5','2x4x6','2x5','2x6','2x6x1','2x6x2','2x6x4','2x6x5','2x6x6','2x7','2x8','2x8x1','2x8x2','2x8x3','2x8x6','2x8x8','24x12','24x14','24x7','3x1x2','3x10x3','3x11','3x2','3x3','3x3x1','3x3x2','3x3x3','3x3x6','3x4','3x4x1','3x4x2','3x4x3','3x4x4','3x4x6','3x5','3x5x2','3x6','3x6x1','3x6x10','3x6x5','3x6x6','3x7','3x7x2','3x7x3','3x8','3x8x6','30x20','32x32','37x18','37x22','4x1x2','4x10','4x10x2','4x11x7','4x12','4x12x3','4x13','4x14','4x16','4x16x1','4x18','4x2','4x2x1','4x2x3','4x20','4x22','4x3','4x3x2','4x3x3','4x4','4x4x1','4x4x10','4x4x2','4x4x3','4x4x4','4x4x5','4x4x6','4x5','4x5x3','4x6','4x6x1','4x6x2','4x6x4','4x7','4x7x2','4x8','4x8x1','4x8x2','4x8x3','4x8x5','4x9','48x48','5x1','5x11','5x2','5x2x1','5x4','5x4x2','5x4x3','5x5','5x6','5x6x2','5x6x3','5x7','5x8','5x8x2','5x8x3','56x26','56x28','56x30','6x10','6x10x3','6x10x5','6x12','6x12x1','6x12x5','6x13','6x14','6x15','6x16','6x16x2','6x2x2','6x24','6x3x2','6x38','6x4','6x4x1','6x4x2','6x4x3','6x5','6x5x2','6x6','6x6x1','6x6x12','6x6x2','6x6x9','6x8','6x8x4','7x3','7x34','7x4x2','7x4x6','7x6','7x7','8x10','8x12','8x16','8x16x2','8x16x5','8x18x3','8x3','8x3x3','8x36','8x4','8x4x2','8x4x3','8x4x6','8x44','8x5x3','8x6x2','8x6x4','8x8','8x8x2','8x8x5','8x8x6','9x10','9x11','9x13','9x2','9x9') DEFAULT NULL,
+  `description` varchar(128) DEFAULT NULL,
+  `type` enum('Animal And Accessories For Animals','Animals And Accessories For Animals','Bases','Beams','Beams W/ Ball And Ball Cup','Beams, Special','Beams, With Bows','Bricks','Bricks And Beams, Special Ã 4,85','Bricks With Bows','Bricks With Slope','Bricks With Slope, Special','Bricks With Special Bows','Bricks, Bows','Bricks, Sloping','Bricks, Special','Bricks, Special Bows','Bricks, Special Circles And Angles','Building Plates','Cartoon, Foil And Foam','Cartoon, Foil And Paper','Cartoon, Foil, Foam And Tree','Child, Accessories','Connectors','Crains And Scaffold','Duplo Animals And Accessories For Animals','Duplo Beams','Duplo Bricks','Duplo Bricks, Bows','Duplo Bricks, Sloping','Duplo Bricks, Special','Duplo Bricks, Special Bows','Duplo Bricks, Special Circles And Angles','Duplo Build- And Level Plates','Duplo Connectors','Duplo Duplo Figures','Duplo Electric Parts','Duplo Fences And Ladders','Duplo Figure Accessories In Hand','Duplo Figures','Duplo Figures, Accessories','Duplo Figures, Theme','Duplo Food Stuff','Duplo Frames, Windows, Walls And Doors','Duplo Functional Elements','Duplo Functional Elements, Others','Duplo Gates And Roofs','Duplo Interior','Duplo Loose Parts','Duplo Modelling Elements','Duplo Plants','Duplo Plates','Duplo Plates, Special','Duplo Portable Storrage','Duplo Rubbers And Strings','Duplo Signs And Flags','Duplo Textiles','Duplo Transportation Means, Accessories','Duplo Transportation Means, Aviation','Duplo Transportation Means, Ships','Duplo Transportation Means, Trains','Duplo Transportation Means, Vehicles','Duplo Tubes','Duplo Tyres And Rims, Special','Duplo Various Elements','Duplo Various Parts','Duplo Wheel Base','Duplo Windscreens And Cockpits','Electric Parts','Fences And Ladders','Figure Accessories In Hand','Figure Accessories, Upper And Lower Part','Figure Accessories, Upper Body','Figure Parts','Figure Parts, Ball W. Guides','Figure, Accessories','Figure, Accessories For The Upper And Lower Part','Figure, Accessories Tools','Figure, Accessories, Shells W/ Ballsnap','Figure, Hair','Figure, Head And Clothing','Figure, Head Clothing','Figure, Heads And Masks','Figure, Others','Figure, Special','Figure, Theme','Figure, Weapons','Figures, Accessories','Figures, Theme','Food Stuff','Frames, Windows, Walls And Doors','Friends  Figure And Heads','Functional Elements','Functional Elements, Gear Wheels And Racks','Functional Elements, Others','Gates And Roofs','Half Beams','Half Beams, Special','Icons','Interior','Labels','Loose Parts','Mini Figure','Mini Figure Head','Modelling Elements','Plants','Plates','Plates, Special','Plates, Special Circles And Angles','Power Functions','Rubbers And Strings','Signs And Flags','Textiles','Transportation Means, Accessories','Transportation Means, Aviation','Transportation Means, Ships','Transportation Means, Trains','Transportation Means, Vehicles','Transportaton Means, Vehicles','Tubes','Tyres And Rims For Snap Ã3,2','Tyres And Rims For/To Snap Ã4,85 W. Cross','Tyres And Rims, Special','Various Elements','Various Parts','Wheel Base','Wheels, Others','Windscreens And Cockpits') DEFAULT NULL,
+  `used_in_sets` int(10) unsigned DEFAULT NULL,
+  `min_year` year(4) DEFAULT NULL,
+  `max_year` year(4) DEFAULT NULL,
+  `bricklink_id` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `USED_IN_SETS` (`used_in_sets`),
+  KEY `DESCRIPTION` (`description`),
+  KEY `COLOR_TYPE_DIM_MAXYEAR_USEDINSETS` (`color`,`part_type`,`dimensions`,`max_year`,`used_in_sets`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `bricks_i_own`;
+CREATE TABLE IF NOT EXISTS `bricks_i_own` (
+  `username` varchar(32) NOT NULL,
+  `id` int(10) unsigned NOT NULL,
+  `quantity` smallint(5) unsigned NOT NULL,
+  PRIMARY KEY (`username`,`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `lego_colors`;
+CREATE TABLE IF NOT EXISTS `lego_colors` (
+  `index` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) DEFAULT NULL,
+  `name` varchar(64) NOT NULL,
+  `rgb` char(8) NOT NULL,
+  `number_parts` int(11) unsigned DEFAULT NULL,
+  `min_year` int(11) unsigned DEFAULT NULL,
+  `max_year` int(11) unsigned DEFAULT NULL,
+  `lego_color` int(11) DEFAULT NULL,
+  `ldraw_color` int(11) DEFAULT NULL,
+  `bricklink_color` int(11) DEFAULT NULL,
+  `bricklink_name` varchar(64) DEFAULT NULL,
+  `peeron_color` varchar(64) DEFAULT NULL,
+  `brickset_color` enum('Aqua','Black','Brick Yellow','Bright Blue','Bright Bluish Green','Bright Bluish Violet','Bright Green','Bright Orange','Bright Purple','Bright Red','Bright Reddish Lilac','Bright Reddish Orange','Bright Reddish Violet','Bright Violet','Bright Yellow','Bright Yellowish Green','Bright Yellowish Orange','Brown','Cool Silver','Cool Silver, Diffuse','Cool Silver, Drum Lacq','Cool Yellow','Copper','Copper, Diffuse','Copper, Drum Lacq','Curry','Dark Azur','Dark Brown','Dark Green','Dark Grey','Dark Nougat','Dark Orange','Dark Royal Blue','Dark Stone Grey','Dove Blue','Earth Blue','Earth Green','Earth Orange','Flame Yellowish Orange','Flamingo Pink','Gold','Grey','In-Mould-Labeling','Lavender','Light Blue','Light Bluish Green','Light Bluish Violet','Light Green','Light Grey','Light Lilac','Light Nougat','Light Orange Brown','Light Purple','Light Reddish Violet','Light Royal Blue','Light Stone Grey','Light Yellow','Light Yellowish Green','Lilac','Medium Azur','Medium Blue','Medium Bluish Green','Medium Bluish Violet','Medium Green','Medium Lavender','Medium Lilac','Medium Nougat','Medium Reddish Violet','Medium Stone Grey','Medium Yellowish Green','Metallic Black','Metallic Bright Blue','Metallic Bright Red','Metallic Dark Green','Metallic Dark Grey','Metallic Earth-Orange','Metallic Sand Blue','Metallic Sand Yellow','Metallic White','Multicombination','New Dark Red','Not specified','Nougat','Olive Green','Pastel Blue','Phosph.Green','Phosphorescent White','Reddish Brown','Reddish Gold','Reddish Lilac','Royal Blue','Sand Blue','Sand Green','Sand Red','Sand Violet','Sand Yellow','Silver','Silver Metallic','Spring Yellowish Green','Titanium Metallic','Tr. Blue','Tr. Br. Bluish.Viol.W.Gliter2%','Tr. Bright Bluish Violet','Tr. Bright Green','Tr. Bright Orange','Tr. Bright Purple','Tr. Bright Reddish Lilac','Tr. Bright Yellowish Green','Tr. Brown','Tr. Fire Yellow','Tr. Flame Yellowish Orange','Tr. Fluore. Blue','Tr. Fluore. Green','Tr. Fluore.Redd. Orange','Tr. Green','Tr. Light Blue','Tr. Light Bluish Green','Tr. Light Green','Tr. Light Royal Blue','Tr. M. Reddish-Viol W. Glit.2%','Tr. Medium Reddish Violet','Tr. Red','Tr. Reddish Lilac','Tr. Yellow','Transparent','Transparent W. Glitter 2%','Warm Gold','Warm Gold, Drum Lacq','Warm Yellowish Orange','White','White Glow') DEFAULT NULL,
+  `color_group` varchar(32) DEFAULT NULL,
+  `color_group_rep` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`index`),
+  KEY `BRICKSET_COLOR` (`brickset_color`),
+  KEY `COLOR_GROUP` (`color_group`),
+  KEY `COLOR_GROUP_REP` (`color_group_rep`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=125 ;
+
+DROP TABLE IF EXISTS `lego_store`;
+CREATE TABLE IF NOT EXISTS `lego_store` (
+  `id` tinyint(3) unsigned NOT NULL,
+  `city` varchar(64) DEFAULT NULL,
+  `state` varchar(64) DEFAULT NULL,
+  `country` varchar(64) DEFAULT NULL,
+  `url` varchar(128) DEFAULT NULL,
+  `last_update_date` date DEFAULT NULL,
+  `rows` tinyint(4) NOT NULL DEFAULT '6',
+  `cols` smallint(5) unsigned NOT NULL DEFAULT '14',
+  `address` varchar(256) DEFAULT NULL,
+  `phone_number` varchar(32) DEFAULT NULL,
+  `latitude` varchar(16) DEFAULT NULL,
+  `longitude` varchar(16) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `COUNTRY_STATE_CITY` (`country`,`state`,`city`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `lego_store_inventory`;
+CREATE TABLE IF NOT EXISTS `lego_store_inventory` (
+  `store_id` tinyint(3) unsigned NOT NULL,
+  `brick_id` varchar(16) NOT NULL,
+  `row` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `col` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `slot` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `price` smallint(5) unsigned DEFAULT NULL,
+  `updated_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`store_id`,`row`,`col`,`slot`),
+  KEY `STORE_BRICK` (`store_id`,`brick_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `lego_store_inventory_activity`;
+CREATE TABLE IF NOT EXISTS `lego_store_inventory_activity` (
+  `id` smallint(5) unsigned NOT NULL,
+  `row` tinyint(3) unsigned NOT NULL,
+  `col` tinyint(3) unsigned NOT NULL,
+  `slot` tinyint(4) DEFAULT NULL,
+  `brick_id` varchar(32) NOT NULL,
+  `updated_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `client_ip` varchar(16) NOT NULL,
+  `updated_by` varchar(32) DEFAULT NULL,
+  KEY `ID_ROW_COL_DATE` (`id`,`row`,`col`,`updated_on`),
+  KEY `UPDATED_ON` (`updated_on`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `sets`;
+CREATE TABLE IF NOT EXISTS `sets` (
+  `id` varchar(16) NOT NULL,
+  `name` varchar(128) DEFAULT NULL,
+  `pieces` int(10) unsigned DEFAULT NULL,
+  `minifigs` smallint(5) unsigned DEFAULT NULL,
+  `price` int(11) unsigned DEFAULT NULL,
+  `piece_types` smallint(5) unsigned DEFAULT NULL,
+  `year` year(4) DEFAULT NULL,
+  `min_age` tinyint(4) unsigned DEFAULT NULL,
+  `max_age` tinyint(4) unsigned DEFAULT NULL,
+  `theme_group` enum('Action/Adventure','Basic','Constraction','Educational','Girls','Historical','Junior','Licensed','Miscellaneous','Model making','Modern day','Pre-school','Racing','Technical','Vintage themes') DEFAULT NULL,
+  `theme` enum('4 Juniors','Action Wheelers','Advanced Models','Adventurers','Agents','Alpha Team','Aqua Raiders','Aquazone','Architecture','Assorted','Atlantis','Avatar The Last Airbender','Baby','Basic','Batman','Belville','Ben 10','Bionicle','Boats','Bricks and More','Building Set with People','Bulk Bricks','Cars','Castle','City','Classic','Clikits','Collectable Minifigures','Creator','Cuusoo','Dacta','Dino','Dino 2010','Dino Attack','Dinosaurs','Discovery','Duplo','Education','Exo-Force','Explore','Fabuland','Factory','Freestyle','Friends','Galidor','Gear','Harry Potter','HERO Factory','Hobby Set','Homemaker','Indiana Jones','Island Xtreme Stunts','Jack Stone','Legends Of Chima','LEGOLAND','Lone Ranger','Lord of the Rings','Make and Create','Master Builder Academy','Mickey Mouse','Mindstorms','Minitalia','Miscellaneous','Model Team','Monster Fighters','Ninjago','Pharaoh''s Quest','Pirates','Pirates of the Caribbean','Power Functions','Power Miners','PreSchool','Primo','Prince of Persia','Promotional','Quatro','Racers','Rock Raiders','Samsonite','Scala','Seasonal','Serious Play','Service Packs','Space','Spider-Man','SpongeBob SquarePants','Sports','Spybotics','Star Wars','Studios','Super Heroes','Technic','Teenage Mutant Ninja Turtles','The Hobbit','Time Cruisers','Town','Toy Story','Trains','Universal Building Set','Vikings','Western','World City','World Racers','Znap') DEFAULT NULL,
+  `subtheme` enum('1.0','1.5','2.0','4.5/12 V','9 V','Accessories','Adventurers','Agori','Aircraft','Airport','Alien Conquest','Alien Force','Aquanauts','Aquaraiders','Aquasharks','Aquazone','Arctic','Baby','Barraki','Basic','Basketball','Battle Pack','Battle Pack - Dragon Knights','Battle Vehicles','Being Me','Belville','Birthday','Black Falcons','Black Knights','Blacktron','Blacktron 2','Boats','Bob the Builder','Bohrok','Bohrok Va','Bohrok-Kal','Bonus/Value Pack','Books/Ideas book','Books/Master Builders','Booster pack','Bricks','Building','Buildings','Cargo','Cars','Castle','Chamber of Secrets','Christmas','Circus','City','Classic','Coast Guard','Coastguard','Collectables','Combi-pack','Competition','Constraction','Construction','Cowboys','Crusaders','Cube Dudes','Custom Cars','Dacta','Dacta software','Dark Forest','DC Universe','Deathly Hallows','Deep Jungle','Desert','Designer Set','Dino','Dino Island','Disney','Disney Princess','Disney''s Baby Mickey','Divers','Dolls','Dora the Explorer','Dragon Knights','Drome Racers','Duplo','Easter','Emergency','Employee gift','Episode I','Episode II','Episode III','Episode IV-VI','Event / Display','Expanded Universe','Expert','Explore','Exploriens','Extreme Team','Fairy-Tale','Fairytales','Fantasy Era','Farm','Ferrari','Ferries','Fire','FIRST LEGO League','Flight','Football','Forest Fire','Forest Police','Forestmen','Fright Knights','Futuron','Galaxy Squad','Gears','General','Glatorian','Glatorian Legends','Goblet of Fire','Golden City','Gravity Games','Half-Blood Prince','Halloween','Harbour','Hockey','Holiday','Houses','Hydronauts','Ice Planet 2002','Imagination','Imperial Armada','Imperial Guards','Indians','Insectoids','Inventor Set','Islanders','Jake and the Never Land Pirates','Jewellery','Jungle','Jurassic Park III','Key Chains/Miscellaneous','Kingdom of the Crystal Skull','Kingdoms','Knights'' Kingdom I','Knights'' Kingdom II','Lamborghini','Large Vehicle','Large Vehicles','Last Crusade','Launch Command','LEGO Brand Store model','LEGO Inside Tour Exclusive','LEGO Internal','LEGO PreSchool','LEGO Store Event','LEGO Store Grand Opening Set','LEGO Universe','LEGO Ville','LEGOLAND model','LEGOLAND Parks','Leisure','Life On Mars','Lion Knights','Little Forest Friends','Little Robots','Logic','M-Tron','Maersk','Maintenance','Mars Mission','Marvel Universe','Matoran','Medical','Microtechnic','Mindstorms','Mini Building Set','Minifig Pack','Minifigure','Minifigures','Mining','Miscellaneous','Mission Deep Freeze','Mission Deep Sea','Mistika','Model','Model Maker','Modular Buildings','Monorail','Monthly Mini Model Build','Mosaic','My Own Creation','Ninja','NXT','NXT 2.0','Order of the Phoenix','Orient Expedition','Original','Outback','Outdoor RC','Paradisa','Pens','Phantoka','Philospher''s Stone','Piraka','Pirates','Planet Set','Play Trains','Playsets','Police','Police and Rescue','Postal','Power Racers','Pre-School/Jumbo','Primo','Princess Castle','Prisoner of Azkaban','Product Collection','Promotional','Race','Racing','Radio-Control','Rahaga','Rahi','Rahkshi','Raiders of the Lost Ark','Res-Q','Rescue','Robo Riders','RoboForce','Royal Knights','Scala','Sculptures','Seasonal','Series 1','Series 2','Series 3','Series 4','Series 5','Series 6','Series 7','Series 8','Series 9','Shell','Shops and Services','Slizer','Space','Space Police','Space Police 2','Space Police 3','Space Port','Special','Speed Racer','Speed Slammers','Speedorz','Spider-Man','Spinners','Spring','Spyrius','Star Wars','Stars','Stingrays','Storage','Studios','Summer','Supplementaries','Supplementary','Supplementary Set','System','Target Gift Card','Team GB','Technic','Telekom','Temple of Doom','Thanksgiving','The Clone Wars','The Fellowship of the Ring','The Old Republic','The Return of the King','The Sands of Time','The Two Towers','Thomas the Tank Engine','Time Twisters','Tiny Turbos','Toa Hagah','Toa Hordika','Toa Inika','Toa Mahri','Toa Mata','Toa Metru','Toa Nuva','Together','Toolo','Town','Toy Story','Traffic','Train','Trains','UFO','Ultimate Collector Series','Unitron','Universal','Universal Building Set','Vahki','Valentines','Vehicle','Vehicles','Vehicles/Creatures','Virtual Product Collection','Visorak','Warriors','Western','Williams F1','Winnie the Pooh','Winter Village','Wolfpack','X-Pod','Xalax','Yoda Chronicles','Zoo','Zooters') DEFAULT NULL,
+  `lego_item_number` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `NAME` (`name`),
+  KEY `TYPE_ID_NAME` (`id`,`name`),
+  KEY `TYPE_THEME_SUBTHEME` (`theme`,`subtheme`,`year`,`min_age`,`max_age`,`price`,`pieces`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `sets_image`;
+CREATE TABLE IF NOT EXISTS `sets_image` (
+  `id` varchar(16) NOT NULL,
+  `img` varchar(64) NOT NULL DEFAULT '',
+  `lego_img_id` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`id`,`img`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `sets_inventory`;
+CREATE TABLE IF NOT EXISTS `sets_inventory` (
+  `id` varchar(16) NOT NULL DEFAULT '',
+  `brick_id` int(10) unsigned NOT NULL,
+  `brick_quantity` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`,`brick_id`),
+  KEY `BRICK_ID` (`brick_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `sets_i_own`;
+CREATE TABLE IF NOT EXISTS `sets_i_own` (
+  `username` varchar(32) NOT NULL,
+  `id` varchar(16) NOT NULL,
+  `quantity` tinyint(3) unsigned NOT NULL,
+  PRIMARY KEY (`username`,`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `sets_manual`;
+CREATE TABLE IF NOT EXISTS `sets_manual` (
+  `id` varchar(16) NOT NULL,
+  `description` varchar(128) NOT NULL,
+  `url` varchar(256) NOT NULL,
+  `filename` varchar(32) DEFAULT NULL,
+  `size` varchar(8) NOT NULL,
+  `book` tinyint(4) NOT NULL,
+  `book_max` tinyint(4) NOT NULL,
+  `version` varchar(8) DEFAULT NULL,
+  PRIMARY KEY (`id`,`description`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `sets_wishlist`;
+CREATE TABLE IF NOT EXISTS `sets_wishlist` (
+  `username` varchar(32) NOT NULL,
+  `id` varchar(16) NOT NULL,
+  `quantity` tinyint(3) unsigned NOT NULL,
+  PRIMARY KEY (`username`,`id`,`quantity`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(32) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `pass` varchar(32) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `regIP` varchar(15) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `joined_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+
+DROP TABLE IF EXISTS `users_email`;
+CREATE TABLE IF NOT EXISTS `users_email` (
+  `email` varchar(128) NOT NULL,
+  `joined_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `client_ip` varchar(16) DEFAULT NULL,
+  PRIMARY KEY (`email`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `www_stores`;
+CREATE TABLE IF NOT EXISTS `www_stores` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `site_name` varchar(32) NOT NULL,
+  `site_id` int(10) unsigned NOT NULL,
+  `name` varchar(128) NOT NULL,
+  `currency` varchar(32) NOT NULL,
+  `country` varchar(64) NOT NULL,
+  `logo` varchar(128) DEFAULT NULL,
+  `url` varchar(128) NOT NULL,
+  `minimum_order` varchar(16) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+DROP TABLE IF EXISTS `www_store_inventory`;
+CREATE TABLE IF NOT EXISTS `www_store_inventory` (
+  `store_id` int(10) unsigned NOT NULL,
+  `lot_id` int(10) unsigned NOT NULL,
+  `lego_id` int(10) unsigned NOT NULL,
+  `boid` varchar(16) NOT NULL,
+  `qty` smallint(5) unsigned NOT NULL,
+  `cond` varchar(4) NOT NULL,
+  `price` varchar(8) NOT NULL,
+  `url` varchar(256) NOT NULL,
+  PRIMARY KEY (`store_id`,`lot_id`,`lego_id`),
+  KEY `lego_id` (`lego_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+

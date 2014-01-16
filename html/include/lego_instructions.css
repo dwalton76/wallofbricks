@@ -1,0 +1,71 @@
+
+img#zoomer {
+    text-align: center;
+}
+
+span.pagenumber {
+    width: 33px;
+    display: inline;
+}
+
+div#parts-list {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+table tr:nth-child(even) td {
+    border: 5px solid #E8E8E8;
+}
+
+table tr:nth-child(odd) td {
+    border: 5px solid #F8F8F8;
+}
+
+td.brick-on-page {
+    border: 5px solid red !important;
+}
+
+/**
+*   The following styles are used in the demos with slideshow controls,
+*   such as play/pause and prev/next buttons.
+*/
+
+#controls {
+    clear: both;
+    width: 920px;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#controls a {
+    background-color: rgb(220,220,220);
+    border: 1px solid #ddd;
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 5px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+#controls a:hover {
+    background-color: rgb(200,200,200);
+    color: #444;
+}
+
+#controls a.active {
+    background-color: #444;
+    border: 1px solid #444;
+    color: #eee;
+}
+
+#control-row {
+    width: 920px;
+    clear: both;
+    height: 30px;
+}
+

@@ -1,0 +1,1032 @@
+
+/* Entire Page - layout */
+body {
+        margin: 0px;
+        padding: 0;
+        background: #FFF;
+        font-family: 'Armata', sans-serif;
+        font-size: 12px;
+        color: #222;
+}
+
+.alignCenter{
+        width: 960px;
+        margin: 0px auto;
+}
+
+footer {
+        width: 960px;
+        text-align: center;
+        height: 20px;
+        margin: 20px auto 0px auto;
+        border-top: 1px solid black;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+}
+
+div.clear {
+        clear: both;
+}
+
+
+/* Entire Page - misc */
+h1, h2, h3 {
+        margin: 0;
+        font-weight: normal;
+        color: #034450;
+}
+
+h1 { font-size: 44px; }
+h2 { font-size: 18px; }
+
+p, ul, ol {
+        margin-top: 0;
+        /* text-align: justify; */
+}
+p {
+        font-size: 14px;
+}
+
+a {
+        color: #12C;
+        text-decoration: none;
+}
+
+a:hover {
+        text-decoration: underline;
+}
+
+a img { border: none; }
+/* Header - Logo */
+#logoHeader {
+        font-size: 70px;
+        font-family: 'Arial Black', Helvetica, sans-serif;
+}
+
+#logoStart {
+        float: left;
+        color: #05131D;
+}
+
+#logoEnd {
+        color: #720E0F;
+}
+
+
+/*
+ * Header - Menu http://www.joepettersson.com/demo/jquery-powered-navigation-bar/
+ * NOTE: you have to tweak the 'nav li' min-width and the 'nav li.last' width as
+ * you add/remove items to the menu.  This is needed to make the overall menu the
+ * correct width.
+ */
+nav {margin-bottom: 20px}
+.clear:after { content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+html[xmlns] .clear { display: block;}
+* html .clear { height: 1%;}
+
+nav.red ul {margin: 0px; padding: 0px; }
+
+/* Top level */
+nav.red li {list-style: none; float: left; position: relative; text-align: center; min-width: 180px}
+nav.red li.first, nav li.first a {border-top-left-radius: 2px; border-bottom-left-radius: 2px; -moz-border-top-left-radius: 2px; -moz-border-bottom-left-radius: 2px;}
+nav.red li.last, nav li.last a {border-top-right-radius: 2px; border-bottom-right-radius: 2px; -moz-border-top-right-radius: 2px; -moz-border-bottom-right-radius: 2px; width: 180px;}
+/* nav.red li.drop a {padding-right: 30px;} */
+nav.red li a {display: block; padding: 9px 23px 10px; text-decoration: none; background-image: url(/images/navigation-sprite-red.png); background-repeat: repeat-x; font-size: 12px; color: #fff; border-top: 1px solid #975555; border-left: 1px solid #813737; text-shadow: 0px -1px 0px #000; font-weight: bold}
+nav.red li a {background-position: 0px 0px;}
+nav.red li a:hover, nav li.active a {background-position: 0px -36px;}
+nav.red li a:active {background-position: 0px -72px;}
+nav.red .dropdown {display: block; float: right; width: 7px; height: 5px; background: url(/images/drop-down.png) no-repeat; margin: -20px 15px 0px 12px;}
+
+/* Drop down */
+nav.red li ul {opacity: 0; position: absolute; top: 45px; left: -26px; padding: 12px 15px; border-radius: 3px; -moz-border-radius: 3px; background: #2e0505; display: none;z-index: 100;}
+nav.red li ul li {border-right: 0px; float: none!important; border-bottom: 1px solid #4b1010; width: 125px;}
+nav.red li ul li:last-child { border-bottom: 0px;}
+nav.red li ul li a {background: none!important; border-left: 0px; border-top: 0px; padding: 10px 0px; font-size: 11px}
+nav.red li ul li a:hover {opacity: 0.5;}
+
+nav.red li ul li.arrow {background: url(/images/arrowtop.png) top left no-repeat; border-bottom: 0px; height: 10px; margin-top: -22px; margin-bottom: 10px;}
+/***** END REd Menu Styles *****/
+
+div#learn-more a:link,
+div#learn-more a:visited,
+div#learn-more a:active,
+div#learn-more a:hover {
+        text-decoration: none;
+        color: white;
+}
+
+.clickable {
+        cursor: pointer;
+}
+
+table tr th {
+        background-color: #1C535D;
+        color: white;
+        font-weight: bold;
+}
+
+table tr:nth-child(even) td {
+        background-color: #E8E8E8;
+        font-weight: bold;
+        padding: 3px;
+        color: black;
+}
+
+table tr:nth-child(odd) td {
+        background-color: #F8F8F8;
+        font-weight: bold;
+        padding: 3px;
+        color: black;
+}
+
+div#pick-a-brick-select select,
+div#pick-a-brick-select input {
+	font-size: 24px;
+}
+
+div.pick-a-brick {
+	margin-bottom: 50px;
+}
+
+table.pick-a-brick thead th,
+table.pick-a-brick tbody td {
+	min-width: 86px;
+	text-align: center;
+}
+
+table.pick-a-brick tbody td.three-by-three,
+table.pick-a-brick tbody td.two-by-two {
+	min-width: 43px;
+	height: 45px;
+}
+
+
+table.pick-a-brick thead tr th:first-child {
+	background-color: white;
+}
+
+table.pick-a-brick thead tr th:first-child,
+table.pick-a-brick tbody tr th:first-child {
+	width: 25px !important;
+	min-width: 25px !important;
+}
+
+table.pick-a-brick tbody td {
+	height: 90;
+}
+
+select#pab_store_id {
+	width: 150px;
+}
+
+
+div#set_display_big {
+	width: 800px;
+	height: 500px;
+	border: 2px solid;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 30px;
+}
+
+div#slideshow-wrapper {
+	width: 660px;
+	margin-left: 20px;
+	margin-bottom: 40px;
+        float: left;
+}
+
+div#set_display_big div#img_wrapper {
+	float: left;
+	width: 600px;
+	text-align: center;
+}
+div#set_display_big div#img_wrapper h2 {
+	margin-top: 10px;
+}
+
+div#slideshow-set-info {
+	margin-left: 700px;
+	margin-top: 20px;
+	font-size: 14px;
+	list-style-type: square;
+}
+
+div.set_display {
+	width: 180px;
+	height: 220px;
+	border: 2px solid;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	float: left;
+	padding: 15px;
+}
+
+div.set_image {
+	text-align: center;
+	min-height: 180px;
+}
+div.set_image img {
+	max-height: 140px;
+}
+
+div.set_image span {
+	padding: 0px !important;
+}
+
+div.set_image span {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+.rounded_corners {
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.shadow {
+	box-shadow: 10px 10px 5px #AAAAAA;
+}
+
+
+/* PAB-Helper after here */
+select#pab_store_id {
+	font-size: 24px;
+	width: 300px;
+}
+
+select#country{
+	font-size: 24px;
+	width: 150px;
+}
+
+div#wall-dimensions-rows {
+	float: left;
+}
+
+div.color-filter h3,
+div.color-sample h3 {
+	color: black;
+	font-weight: bold;
+	height: 36px;
+}
+
+div.color-filter,
+div.color-sample {
+	float: left;
+	width: 100px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+div#brick-color-and-keyword {
+	float: left;
+	/* height: 800px; */
+}
+
+div#brick-color-selection {
+	width: 700px;
+	height: 350px;
+	/* margin-bottom: 20px; */
+	position: relative;
+}
+
+div#brick-generic-colors {
+	position: absolute;
+	top: 0;
+}
+
+div.brick-specific-colors {
+	width: 700px;
+	display: none;
+	position: absolute;
+	top: 0;
+}
+
+div.brick-specific-colors div.corner-case {
+	display: none;
+}
+
+div.color-squares {
+	margin-left: 130px;
+}
+
+div.go-back-to-generic {
+	float: left;
+	width: 130px;
+	height: 272px;
+}
+
+div.go-back-to-generic img {
+	cursor: pointer;
+	margin-top: 100px;
+}
+
+
+div.color-filter div.color-fill,
+div.color-sample div.color-fill {
+	width: 100px;
+	height: 100px;
+
+        /* round the corners */
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+
+	box-shadow: 10px 10px 5px #AAAAAA;
+	cursor: pointer;
+}
+
+div.color-selected {
+	font-style: italic;
+}
+
+div.color-selected div.color-fill {
+	box-shadow: 10px 10px 5px #222222;
+}
+
+div.lego-type {
+	float: left;
+	font-weight: bold;
+	font-size: 16px;
+	max-width: 100px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+div.lego-part {
+	float: left;
+	text-align: center;
+	width: 124px;
+	height: 235px;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	padding: 10px;
+	cursor: pointer;
+	text-align: left;
+	overflow: hidden;
+	border: 4px solid white;
+	font-size: 22px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+}
+
+div.lego-part:hover {
+	font-style: italic;
+}
+
+div.lego-part.selected {
+	border: 4px solid red;
+	font-style: italic;
+}
+
+div.lego-part img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.lego-part span {
+	font-weight: bold;
+}
+
+div#lego-choices {
+	border-top: 2px solid black;
+	padding-top: 20px;
+	text-align: center;
+        width: 960px;
+        margin: 0px auto;
+}
+
+div#lego-choices div#search-parameters {
+	margin-left: 60px;
+	float: right;
+	text-align: left;
+	width: 580px;
+	margin-bottom: 10px;
+}
+
+div#lego-choices div#save-part {
+	float: left;
+	margin-left: 120px;
+	margin-bottom: 30px;
+	border: 4px solid white;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+div#lego-choices div#save-part:hover {
+	border: 4px solid gray;
+}
+
+input.save-button {
+	background-image: url(/images/save.png);
+	background-position:  0px 0px;
+	background-repeat: no-repeat;
+	width: 128px;
+	height: 128px;
+	border: 0px;
+	cursor: pointer;
+}
+
+table#wall-map {
+	width: 100%;
+}
+
+table#wall-map thead tr th:first-child {
+	background-color: white;
+}
+
+table#wall-map td {
+	font-size: 12px;
+	padding: 5px;
+	text-align: center;
+}
+
+table#wall-map td.selected {
+	border: 4px solid red !important;
+}
+
+div#part-variables {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+div#lego-types {
+	height: 180px;
+}
+
+div#ignore-filters,
+div#lego-dimensions,
+div#lego-choices,
+div.lego-type {
+	font-size: 24px;
+}
+
+div#keyword-filters {
+	position: relative;
+	z-index: 10;
+	width: 120px;
+}
+
+div#keyword-filters h2 {
+	margin-top: 20px;
+}
+
+div#lego-dimensions {
+	margin-bottom: 50px;
+}
+
+
+div#lego-dimensions span.tiny {
+	font-size: 10px;
+	display: block;
+}
+
+div#lego-choices h2,
+div#part-variables h2 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+div#lego-choices button {
+	width: 100px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td.td-link {
+	cursor: pointer;
+	color: #12C;
+}
+
+td.td-link span.tiny {
+	color: black !important;
+}
+
+div#max-slot-count {
+	padding-left: 95;
+	width: 325px;
+}
+
+div#current-brick {
+	padding: 20px;
+	width: 450px;
+	text-align: center;
+}
+
+div#current-row-col-slot {
+	float: left;
+	width: 490px;
+}
+
+div#user-question {
+	display: block;
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 16px;
+	margin-left: 520px;
+	width: 380px;
+
+}
+
+div#user-question a {
+	font-size: 48px;
+}
+
+div#wall-map-navigation {
+	float: right;
+	padding: 20px;
+}
+
+div#wall-map-navigation input {
+	font-size: 24px;
+}
+
+span#dimension_x_display {
+	font-size: 48px;
+	padding-left: 50px;
+	padding-right: 20px;
+}
+
+span#dimension_y_display {
+	font-size: 48px;
+	padding-left: 20px;
+
+}
+
+div#dimension_x_modifiers {
+	float: left;
+	margin-left: 20px;
+}
+
+div#dimension_y_modifiers {
+	margin-left: 120px;
+}
+
+div.dimension_modifier {
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+div#non-color-attributes {
+	width: 250px;
+	float: right;
+}
+
+span.updated-on {
+	display: block;
+	font-weight: normal;
+	font-size: 12px;
+	padding-top: 5px;
+}
+
+div#lego-choices input#submit {
+	font-size: 36px;
+	padding: 10px;
+}
+
+div#overview {
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+div#overview-left {
+	float: left;
+}
+
+div#overview-right {
+	width: 400px;
+	margin-left: 520px;
+}
+
+div#overview-right div {
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+div#footer-left {
+	text-align: left;
+	float: left;
+	width: 300px;
+	margin-left: 150px;
+}
+
+div#facebook {
+	margin-bottom: 10px;
+}
+
+div#googleplus {
+	margin-bottom: 15px;
+	float: left;
+}
+
+div#twitter {
+	margin-bottom: 15px;
+	margin-left: 200px;
+	float: left;
+}
+
+div#footer-right {
+	width: 300px;
+	margin-left: 520px;
+}
+
+div#wall-activity-wrapper {
+	width: 100%;
+}
+
+table#wall-activity {
+	text-align: center;
+        margin: 0px auto;
+}
+
+table#wall-activity td {
+	padding: 10px;
+	width: 111px;
+}
+
+a#prev,
+a#prev-set-by-brick,
+a#prev-set-by-search {
+	float: left;
+}
+
+a#next,
+a#next-set-by-brick,
+a#next-set-by-search {
+	float: right;
+}
+
+div#navigation-method {
+	margin-top: 30px;
+}
+
+div#start-from-the {
+	float: left;
+	width: 200px;
+}
+
+div#then-go-choices {
+	margin-left: 220px;
+}
+
+div.startright,
+div.startbottom {
+	display: none;
+}
+
+div#under-contruction {
+	height: 550px;
+}
+
+div#under-contruction img {
+	float: right;
+}
+
+div#learn-more {
+        margin: 0px auto;
+        text-align: center;
+	background-color: #720E0F;
+	width: 200px;
+	color: white;
+        font-size: 32px !important;
+        font-weight: bold;
+	border: 4px solid silver;
+	cursor: pointer;
+	padding: 20px;
+}
+
+div#learn-more:hover {
+	background-color: #97352B;
+}
+
+div#learn-more a:hover {
+        text-decoration: none;
+}
+
+div#newsletter {
+	font-size: 20px;
+}
+
+input.hidden,
+span.hidden {
+	display: none;
+}
+
+img.yes-no-prompt {
+	border: 4px solid white;
+	padding: 10px;
+	width: 156px;
+	height: 156px;
+}
+
+img.yes-no-prompt:hover {
+	border: 4px solid gray;
+}
+
+div#map-canvas {
+	width: 500px;
+	height: 400px;
+	float: left;
+	margin: 20px;
+}
+
+div#snail-mail-address,
+div#telephone,
+div#wall-activity,
+div#last-updated-on {
+	margin-left: 540px;
+}
+
+div#wall-activity,
+div#store-contact-info,
+div#last-updated-on {
+	padding-top: 20px;
+}
+
+div#set-id {
+	width: 300px;
+	float: left;
+}
+
+div#sets-filters {
+	margin-left: 320px;
+}
+
+div#pab_availability {
+	margin-top: 20px;
+}
+
+div#current_availability {
+	width: 470px;
+	float: left;
+	padding-left: 20px;
+}
+
+div#instructions-pdfs table th,
+div#current_availability table th,
+div#past_availability table th,
+div#brickowl_availability table th {
+	padding: 5px;
+}
+
+div#instructions-pdfs table,
+div#brickowl_availability table {
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+div#instructions-pdfs {
+	padding-top: 20px;
+}
+
+div#past_availability {
+	width: 470px;
+	margin-left: 490px;
+}
+
+div#store-information {
+	margin-top: 20px;
+}
+
+div#filter-options {
+	margin-top: 20px;
+	width: 950px;
+}
+
+div.filter-option {
+	display: none;
+}
+
+div#min-date-wrapper {
+	float: left;
+}
+
+div#min-date-wrapper label,
+div#max-date-wrapper label {
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+div#brick_overview div,
+div#pab_availability div {
+	padding-bottom: 20px;
+}
+
+div#left-side {
+	float: left;
+	width: 720px;
+}
+
+div#right-side {
+	margin-left: 740px;
+}
+
+.dom-link {
+	cursor: pointer;
+}
+
+div#page_x_of_y {
+	margin: 0px auto;
+	width: 200px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+table#colors-of-this-brick td {
+	background-color: white;
+	border: 2px solid white;
+	width: 60px;
+	text-align: center;
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+}
+
+table#colors-of-this-brick td:hover {
+	border: 2px solid gray;
+}
+
+table#colors-of-this-brick td.selected {
+	border: 2px solid black;
+}
+
+div.question {
+	font-size: 16px;
+}
+
+div.question span.guts {
+	font-style: italic;
+}
+
+div.answer {
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+div.question {
+}
+
+div.question span.qa,
+div.answer span.qa {
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+div.left {
+	float: left;
+}
+
+span.max-slot-option {
+	font-size: 28px;
+	padding-left: 15px;
+}
+
+span.max-slot-option.selected-slot {
+	font-weight: bold;
+	font-size: 34px;
+}
+
+img.sprite-brick {
+	width: 80px;
+	height: 60px;
+}
+
+div.minifig_display {
+	width:80px;
+	text-align: center;
+	padding: 15px;
+	border: solid 2px;
+	float: left;
+	margin-left: 20px;
+}
+
+div.set-guts {
+	padding-bottom: 20px;
+}
+
+div.set-guts>table ,
+div.set-guts>div {
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+div#brick-image {
+	float: left;
+}
+
+div#external-brick-links {
+	margin-left: 220px;
+	margin-top: 40px;
+}
+
+div.td-guts {
+    width: 80px;
+}
+
+div.td-guts img {
+	border: 5px solid white;
+}
+
+div.td-guts-large {
+    max-width: 200px !important;
+}
+
+
+span.amazon {
+	color: rgb(0, 51, 153);
+	background-color: white;
+	cursor: pointer;
+	display: block;
+	width: 65px;
+        /*
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+        */
+	border-radius: 10px;
+	padding: 2px 5px 2px 10px;
+	border: 2px solid gray;
+	font-weight: bold;
+	margin-bottom: 10px;
+	min-height: 30px;
+}
+
+span.amazon:hover {
+	box-shadow: 5px 5px 3px #222222;
+}
+
+.hide {
+	display: none;
+}
+
+div.own-status {
+	float: left;
+}
+
+div.wishlist-status {
+	margin-left: 100px;
+}
+
+span.jquery_remove_set {
+	float: right;
+}
+
+span.qty-shortage {
+	display: none;
+}
+
+div#login_required {
+    height: 300px;
+}
+
+div#login_required #img_wrapper {
+    float: left;
+    width: 300px;
+}
+
+div#login_required #img_wrapper img {
+    width: 300px;
+}
+
+div#login_required #benefits {
+    padding-left: 320px;
+}
+
+div#brickowl_availability {
+    margin-bottom: 20px;
+}
+
+div#parts-cost div {
+    margin-bottom: 20px;
+}
+
+div#parts-cost-description {
+    font-size: large;
+}
+
+div.parts-needed-by-store {
+    float: left;
+    width: 450px;
+}
+

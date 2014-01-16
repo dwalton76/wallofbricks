@@ -1,0 +1,106 @@
+
+/* Slideshow */
+.rs-slideshow {
+    border: 12px solid #444;
+    height: 620px;
+    margin: 24px auto;
+    overflow: hidden;
+    position: relative;
+    width: 620px;
+    text-align: center;
+}
+
+.rs-slideshow .slide-container {
+    background-color: #FFF;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.rs-slideshow .slide-container img {
+    position: absolute;
+}
+
+/* Without this the 1st images loads halfway off the screen */
+.rs-slideshow .slide-container img.position-relative {
+    position: relative;
+}
+
+
+/*    Hide the slide data container    */
+.rs-slideshow .slides {
+    display: none;
+}
+
+/**
+*   The following styles are used in the demos with slideshow controls,
+*   such as play/pause and prev/next buttons.
+*/
+
+.rs-controls {
+    clear: both;
+    width: 620px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rs-play-pause, .rs-prev, .rs-next {
+    float: left;
+    margin-right: 12px;
+}
+.rs-controls ul {
+    float: left;
+    list-style: none;
+    margin: 0 6px 0 0;
+    padding: 0;
+    width: auto;
+}
+.rs-index-list li {
+    float: left;
+    margin-right: 6px;
+}
+.rs-controls a {
+    background-color: rgb(220,220,220);
+    border: 1px solid #ddd;
+    /*border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;*/
+    color: #444;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.1em;
+    padding: 3px 5px;
+    text-decoration: none;
+}
+.rs-controls a:hover {
+    background-color: rgb(200,200,200);
+    color: #444;
+}
+.rs-controls a.rs-active {
+    background-color: #444;
+    border: 1px solid #444;
+    color: #eee;
+}
+
+
+#callback-messages,
+#slide-class-message {
+    margin: 48px auto;
+    /* width: 620px; */
+}
+.slide-container.some-custom-class .slide-caption {
+    background-color: #890;
+    font-size: 3em;
+    font-style: italic;
+    font-weight: bold;
+    text-align: right;
+    top: 0;
+    width: 28%;
+}
+
